@@ -9,6 +9,8 @@ from espeak import core as espeak_core
 
 # here we are using AZLyrics as our lyric provider, this might be a little
 # sketchy regarding licensing, so the provider might need to be replaced later
+# we're using AZLyrics because the URL structure is nice and simple:
+# <http://azlyrics.com/artist/song> alphanumeric only with no spaces
 def lyrics_get():
     # get artist/song info
     artist = raw_input("What artist am I covering? ")
@@ -18,7 +20,6 @@ def lyrics_get():
     artist = re.sub('[^A-Za-z0-9]+', "", artist)
     song = re.sub('[^A-Za-z0-9]+', "", song)
     # make it all lowercase to work with AZLyrics URL structure
-    # AZLyrics url structure is nice, alphanumeric only with no spaces
     artist = artist.lower()
     song = song.lower()
     # get the lyrics from the AZLyrics website now
