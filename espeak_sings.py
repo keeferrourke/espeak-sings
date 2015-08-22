@@ -7,10 +7,9 @@ import urllib
 from espeak import espeak
 from espeak import core as espeak_core
 
-# here we are using AZLyrics as our lyric provider, this might be a little
-# sketchy regarding licensing, so the provider might need to be replaced later
+# here we are using AZLyrics as our lyric provider
 # we're using AZLyrics because the URL structure is nice and simple:
-# <http://azlyrics.com/artist/song> alphanumeric only with no spaces
+# <http://azlyrics.com/artist/song> lower alphanumeric only with no spaces
 def lyrics_get():
     # get artist/song info
     artist = raw_input("What artist am I covering? ")
@@ -28,6 +27,7 @@ def lyrics_get():
     html_copy = str(raw_html.read())
     # now lets parse this ugly HTML document to get the lyrics from it
     # this parsing works on the grounds that AZLyrics doesn't change their webpage structure, ever
+    # splitting at the licence warning is okay because I am not a third party lyric provider
     split = html_copy.split('<!-- Usage of azlyrics.com content by any third-party lyrics provider is prohibited by our licensing agreement. Sorry about that. -->',1)
     split_html = split[1]
     split = split_html.split('</div>',1)
