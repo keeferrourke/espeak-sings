@@ -14,3 +14,7 @@ Version 0.1
 ### Known issues/annoyances
 Without the sleep timer espeak quits about 1 second into the song.
 The sleep timer is an ugly work around to make espeak do its thing. It results in a 5 minute silence after espeak finishes, and limits songs to 5 minutes in length. A more dynamic solution is required.
+
+### License
+This is free software licensed under the WTFPL. See COPYING for more details.
+![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)
