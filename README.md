@@ -17,4 +17,5 @@ The sleep timer is an ugly work around to make espeak do its thing. It results i
 
 ### License
 This is free software licensed under the WTFPL. See COPYING for more details.
+
 ![WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)
